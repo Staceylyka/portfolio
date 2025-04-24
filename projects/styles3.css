@@ -1,0 +1,83 @@
+@media only screen and (max-width: 550px) {
+#nav-bar {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  top:0;
+  position:fixed;
+  z-index: 1000;
+  margin-left: 20px;
+}
+}
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px 40px;
+    background: #000000;
+}
+.nav-link {
+  text-decoration: none;
+  color: violet;
+  font-weight: bold;
+  position:relative;
+}
+body {
+  background: linear-gradient(135deg, #4b0082, #8a2be2, #ff69b4);
+  color: white;
+}
+.music-notes {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.music-notes span {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  animation: floatNotes 6s linear infinite;
+  opacity: 0;
+}
+
+.music-notes span:nth-child(1) { left: 10px; animation-delay: 0s; }
+.music-notes span:nth-child(2) { left: 40px; animation-delay: 2s; }
+.music-notes span:nth-child(3) { left: 70px; animation-delay: 4s; }
+.music-notes span:nth-child(4) { left: 100px; animation-delay: 1s; }
+
+@keyframes floatNotes {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) scale(1.5);
+    opacity: 0;
+  }
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
